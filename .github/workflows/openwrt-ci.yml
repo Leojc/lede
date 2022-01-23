@@ -76,6 +76,7 @@ jobs:
           CONFIG_TARGET_IMAGES_GZIP=y
           CONFIG_KERNEL_BUILD_USER="OpenWrt-CI"
           CONFIG_KERNEL_BUILD_DOMAIN="Azure"
+          CONFIG_PACKAGE_luci-theme-argon=y
           EOF
 
           #
@@ -130,6 +131,12 @@ jobs:
           name: OpenWrt_firmware
           path: ./bin/targets/
 
+      - name: Deliver .config
+        uses: actions/upload-artifact@v2
+        with:
+          name: .config
+          path: ./.config
+          
       - name: Upload release asset
         if: github.event == 'release'
         uses: svenstaro/upload-release-action@v2
