@@ -2503,7 +2503,7 @@ jobs:
           # CONFIG_PACKAGE_kmod-ipt-sysrq is not set
           # CONFIG_PACKAGE_kmod-ipt-tarpit is not set
           # CONFIG_PACKAGE_kmod-ipt-tee is not set
-          # CONFIG_PACKAGE_kmod-ipt-tproxy is not set
+          CONFIG_PACKAGE_kmod-ipt-tproxy=y
           # CONFIG_PACKAGE_kmod-ipt-u32 is not set
           # CONFIG_PACKAGE_kmod-ipt-ulog is not set
           # CONFIG_PACKAGE_kmod-netatop is not set
@@ -2765,9 +2765,9 @@ jobs:
           # CONFIG_PACKAGE_kmod-tpm-i2c-infineon is not set
           # CONFIG_PACKAGE_kmod-w83627hf-wdt is not set
           CONFIG_PACKAGE_kmod-zram=y
-          CONFIG_ZRAM_DEF_COMP_LZORLE=y
+          # CONFIG_ZRAM_DEF_COMP_LZORLE is not set
           # CONFIG_ZRAM_DEF_COMP_LZO is not set
-          # CONFIG_ZRAM_DEF_COMP_LZ4 is not set
+          CONFIG_ZRAM_DEF_COMP_LZ4=y
           # CONFIG_ZRAM_DEF_COMP_ZSTD is not set
           # end of Other modules
 
@@ -3462,7 +3462,8 @@ jobs:
           # CONFIG_PACKAGE_libzip-mbedtls is not set
           # CONFIG_PACKAGE_libzip-nossl is not set
           CONFIG_PACKAGE_libzip-openssl=y
-          # CONFIG_PACKAGE_libzstd is not set
+          CONFIG_PACKAGE_libzstd=y
+          CONFIG_ZSTD_OPTIMIZE_O3=y
           # end of Compression
 
           #
@@ -4013,7 +4014,9 @@ jobs:
           #
           # CONFIG_PACKAGE_libgnutls is not set
           # CONFIG_PACKAGE_libgnutls-dane is not set
-          # CONFIG_PACKAGE_libmbedtls is not set
+          CONFIG_PACKAGE_libmbedtls=y
+          # CONFIG_LIBMBEDTLS_DEBUG_C is not set
+          # CONFIG_LIBMBEDTLS_HKDF_C is not set
           # CONFIG_PACKAGE_libnss is not set
           CONFIG_PACKAGE_libopenssl=y
 
@@ -4171,7 +4174,7 @@ jobs:
           CONFIG_PACKAGE_libcap=y
           # CONFIG_PACKAGE_libcap-bin is not set
           # CONFIG_PACKAGE_libcap-ng is not set
-          # CONFIG_PACKAGE_libcares is not set
+          CONFIG_PACKAGE_libcares=y
           CONFIG_PACKAGE_libcbor=y
           # CONFIG_PACKAGE_libcgroup is not set
           # CONFIG_PACKAGE_libcharset is not set
@@ -4243,10 +4246,10 @@ jobs:
           # CONFIG_PACKAGE_libelf is not set
           # CONFIG_PACKAGE_libesmtp is not set
           # CONFIG_PACKAGE_libestr is not set
-          # CONFIG_PACKAGE_libev is not set
+          CONFIG_PACKAGE_libev=y
           CONFIG_PACKAGE_libevdev=y
           # CONFIG_PACKAGE_libevent2 is not set
-          # CONFIG_PACKAGE_libevent2-core is not set
+          CONFIG_PACKAGE_libevent2-core=y
           # CONFIG_PACKAGE_libevent2-extra is not set
           # CONFIG_PACKAGE_libevent2-openssl is not set
           # CONFIG_PACKAGE_libevent2-pthreads is not set
@@ -4469,7 +4472,14 @@ jobs:
           # CONFIG_PACKAGE_libsndfile is not set
           # CONFIG_PACKAGE_libsoc is not set
           # CONFIG_PACKAGE_libsocks is not set
-          # CONFIG_PACKAGE_libsodium is not set
+          CONFIG_PACKAGE_libsodium=y
+
+          #
+          # Configuration
+          #
+          CONFIG_LIBSODIUM_MINIMAL=y
+          # end of Configuration
+
           # CONFIG_PACKAGE_libsoup is not set
           CONFIG_PACKAGE_libsoxr=y
           # CONFIG_PACKAGE_libspeex is not set
@@ -4606,7 +4616,7 @@ jobs:
           # CONFIG_LUCI_LANG_hu is not set
           # CONFIG_LUCI_LANG_pt is not set
           # CONFIG_LUCI_LANG_ro is not set
-          # CONFIG_LUCI_LANG_en is not set
+          CONFIG_LUCI_LANG_en=y
           # CONFIG_LUCI_LANG_el is not set
           # CONFIG_LUCI_LANG_sk is not set
           # CONFIG_LUCI_LANG_ja is not set
@@ -4762,7 +4772,7 @@ jobs:
           # CONFIG_PACKAGE_luci-app-unbound is not set
           CONFIG_PACKAGE_luci-app-upnp=y
           # CONFIG_PACKAGE_luci-app-usb-printer is not set
-          # CONFIG_PACKAGE_luci-app-uugamebooster is not set
+          CONFIG_PACKAGE_luci-app-uugamebooster=y
           CONFIG_PACKAGE_luci-app-v2ray-server=y
           # CONFIG_PACKAGE_luci-app-verysync is not set
           CONFIG_PACKAGE_luci-app-vlmcsd=y
@@ -4841,7 +4851,7 @@ jobs:
           # CONFIG_PACKAGE_luci-i18n-base-cs is not set
           # CONFIG_PACKAGE_luci-i18n-base-de is not set
           # CONFIG_PACKAGE_luci-i18n-base-el is not set
-          # CONFIG_PACKAGE_luci-i18n-base-en is not set
+          CONFIG_PACKAGE_luci-i18n-base-en=y
           # CONFIG_PACKAGE_luci-i18n-base-es is not set
           # CONFIG_PACKAGE_luci-i18n-base-fr is not set
           # CONFIG_PACKAGE_luci-i18n-base-he is not set
@@ -4864,13 +4874,13 @@ jobs:
           CONFIG_PACKAGE_luci-i18n-base-zh-cn=y
           # CONFIG_PACKAGE_luci-i18n-base-zh-tw is not set
           # CONFIG_PACKAGE_luci-i18n-bonding-de is not set
-          # CONFIG_PACKAGE_luci-i18n-bonding-en is not set
+          CONFIG_PACKAGE_luci-i18n-bonding-en=y
           CONFIG_PACKAGE_luci-i18n-bonding-zh-cn=y
           # CONFIG_PACKAGE_luci-i18n-commands-ca is not set
           # CONFIG_PACKAGE_luci-i18n-commands-cs is not set
           # CONFIG_PACKAGE_luci-i18n-commands-de is not set
           # CONFIG_PACKAGE_luci-i18n-commands-el is not set
-          # CONFIG_PACKAGE_luci-i18n-commands-en is not set
+          CONFIG_PACKAGE_luci-i18n-commands-en=y
           # CONFIG_PACKAGE_luci-i18n-commands-es is not set
           # CONFIG_PACKAGE_luci-i18n-commands-fr is not set
           # CONFIG_PACKAGE_luci-i18n-commands-he is not set
@@ -4896,7 +4906,7 @@ jobs:
           # CONFIG_PACKAGE_luci-i18n-ddns-cs is not set
           # CONFIG_PACKAGE_luci-i18n-ddns-de is not set
           # CONFIG_PACKAGE_luci-i18n-ddns-el is not set
-          # CONFIG_PACKAGE_luci-i18n-ddns-en is not set
+          CONFIG_PACKAGE_luci-i18n-ddns-en=y
           # CONFIG_PACKAGE_luci-i18n-ddns-es is not set
           # CONFIG_PACKAGE_luci-i18n-ddns-fr is not set
           # CONFIG_PACKAGE_luci-i18n-ddns-he is not set
@@ -4924,7 +4934,7 @@ jobs:
           # CONFIG_PACKAGE_luci-i18n-diag-core-cs is not set
           # CONFIG_PACKAGE_luci-i18n-diag-core-de is not set
           # CONFIG_PACKAGE_luci-i18n-diag-core-el is not set
-          # CONFIG_PACKAGE_luci-i18n-diag-core-en is not set
+          CONFIG_PACKAGE_luci-i18n-diag-core-en=y
           # CONFIG_PACKAGE_luci-i18n-diag-core-es is not set
           # CONFIG_PACKAGE_luci-i18n-diag-core-fr is not set
           # CONFIG_PACKAGE_luci-i18n-diag-core-he is not set
@@ -4953,7 +4963,7 @@ jobs:
           # CONFIG_PACKAGE_luci-i18n-firewall-cs is not set
           # CONFIG_PACKAGE_luci-i18n-firewall-de is not set
           # CONFIG_PACKAGE_luci-i18n-firewall-el is not set
-          # CONFIG_PACKAGE_luci-i18n-firewall-en is not set
+          CONFIG_PACKAGE_luci-i18n-firewall-en=y
           # CONFIG_PACKAGE_luci-i18n-firewall-es is not set
           # CONFIG_PACKAGE_luci-i18n-firewall-fr is not set
           # CONFIG_PACKAGE_luci-i18n-firewall-he is not set
@@ -4993,7 +5003,7 @@ jobs:
           # CONFIG_PACKAGE_luci-i18n-ntpc-cs is not set
           # CONFIG_PACKAGE_luci-i18n-ntpc-de is not set
           # CONFIG_PACKAGE_luci-i18n-ntpc-el is not set
-          # CONFIG_PACKAGE_luci-i18n-ntpc-en is not set
+          CONFIG_PACKAGE_luci-i18n-ntpc-en=y
           # CONFIG_PACKAGE_luci-i18n-ntpc-es is not set
           # CONFIG_PACKAGE_luci-i18n-ntpc-fr is not set
           # CONFIG_PACKAGE_luci-i18n-ntpc-he is not set
@@ -5020,7 +5030,7 @@ jobs:
           # CONFIG_PACKAGE_luci-i18n-qos-cs is not set
           # CONFIG_PACKAGE_luci-i18n-qos-de is not set
           # CONFIG_PACKAGE_luci-i18n-qos-el is not set
-          # CONFIG_PACKAGE_luci-i18n-qos-en is not set
+          CONFIG_PACKAGE_luci-i18n-qos-en=y
           # CONFIG_PACKAGE_luci-i18n-qos-es is not set
           # CONFIG_PACKAGE_luci-i18n-qos-fr is not set
           # CONFIG_PACKAGE_luci-i18n-qos-he is not set
@@ -5046,7 +5056,7 @@ jobs:
           # CONFIG_PACKAGE_luci-i18n-samba-cs is not set
           # CONFIG_PACKAGE_luci-i18n-samba-de is not set
           # CONFIG_PACKAGE_luci-i18n-samba-el is not set
-          # CONFIG_PACKAGE_luci-i18n-samba-en is not set
+          CONFIG_PACKAGE_luci-i18n-samba-en=y
           # CONFIG_PACKAGE_luci-i18n-samba-es is not set
           # CONFIG_PACKAGE_luci-i18n-samba-fr is not set
           # CONFIG_PACKAGE_luci-i18n-samba-he is not set
@@ -5074,7 +5084,7 @@ jobs:
           # CONFIG_PACKAGE_luci-i18n-sqm-cs is not set
           # CONFIG_PACKAGE_luci-i18n-sqm-de is not set
           # CONFIG_PACKAGE_luci-i18n-sqm-el is not set
-          # CONFIG_PACKAGE_luci-i18n-sqm-en is not set
+          CONFIG_PACKAGE_luci-i18n-sqm-en=y
           # CONFIG_PACKAGE_luci-i18n-sqm-es is not set
           # CONFIG_PACKAGE_luci-i18n-sqm-fi is not set
           # CONFIG_PACKAGE_luci-i18n-sqm-fr is not set
@@ -5103,7 +5113,7 @@ jobs:
           # CONFIG_PACKAGE_luci-i18n-statistics-cs is not set
           # CONFIG_PACKAGE_luci-i18n-statistics-de is not set
           # CONFIG_PACKAGE_luci-i18n-statistics-el is not set
-          # CONFIG_PACKAGE_luci-i18n-statistics-en is not set
+          CONFIG_PACKAGE_luci-i18n-statistics-en=y
           # CONFIG_PACKAGE_luci-i18n-statistics-es is not set
           # CONFIG_PACKAGE_luci-i18n-statistics-fr is not set
           # CONFIG_PACKAGE_luci-i18n-statistics-he is not set
@@ -5135,7 +5145,7 @@ jobs:
           # CONFIG_PACKAGE_luci-i18n-upnp-cs is not set
           # CONFIG_PACKAGE_luci-i18n-upnp-de is not set
           # CONFIG_PACKAGE_luci-i18n-upnp-el is not set
-          # CONFIG_PACKAGE_luci-i18n-upnp-en is not set
+          CONFIG_PACKAGE_luci-i18n-upnp-en=y
           # CONFIG_PACKAGE_luci-i18n-upnp-es is not set
           # CONFIG_PACKAGE_luci-i18n-upnp-fr is not set
           # CONFIG_PACKAGE_luci-i18n-upnp-he is not set
@@ -5156,6 +5166,7 @@ jobs:
           # CONFIG_PACKAGE_luci-i18n-upnp-vi is not set
           CONFIG_PACKAGE_luci-i18n-upnp-zh-cn=y
           # CONFIG_PACKAGE_luci-i18n-upnp-zh-tw is not set
+          CONFIG_PACKAGE_luci-i18n-uugamebooster-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-v2ray-server-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-vlmcsd-zh-cn=y
           CONFIG_PACKAGE_luci-i18n-vsftpd-zh-cn=y
@@ -5174,7 +5185,7 @@ jobs:
           # CONFIG_PACKAGE_luci-i18n-wol-cs is not set
           # CONFIG_PACKAGE_luci-i18n-wol-de is not set
           # CONFIG_PACKAGE_luci-i18n-wol-el is not set
-          # CONFIG_PACKAGE_luci-i18n-wol-en is not set
+          CONFIG_PACKAGE_luci-i18n-wol-en=y
           # CONFIG_PACKAGE_luci-i18n-wol-es is not set
           # CONFIG_PACKAGE_luci-i18n-wol-fr is not set
           # CONFIG_PACKAGE_luci-i18n-wol-he is not set
@@ -5462,7 +5473,7 @@ jobs:
           # CONFIG_PACKAGE_iptables-mod-sysrq is not set
           # CONFIG_PACKAGE_iptables-mod-tarpit is not set
           # CONFIG_PACKAGE_iptables-mod-tee is not set
-          # CONFIG_PACKAGE_iptables-mod-tproxy is not set
+          CONFIG_PACKAGE_iptables-mod-tproxy=y
           # CONFIG_PACKAGE_iptables-mod-trace is not set
           # CONFIG_PACKAGE_iptables-mod-u32 is not set
           # CONFIG_PACKAGE_iptables-mod-ulog is not set
@@ -6015,12 +6026,12 @@ jobs:
           # CONFIG_PACKAGE_radicale2 is not set
           # CONFIG_PACKAGE_radicale2-examples is not set
           # CONFIG_PACKAGE_redsocks2 is not set
-          # CONFIG_PACKAGE_shadowsocks-libev-config is not set
-          # CONFIG_PACKAGE_shadowsocks-libev-ss-local is not set
-          # CONFIG_PACKAGE_shadowsocks-libev-ss-redir is not set
-          # CONFIG_PACKAGE_shadowsocks-libev-ss-rules is not set
-          # CONFIG_PACKAGE_shadowsocks-libev-ss-server is not set
-          # CONFIG_PACKAGE_shadowsocks-libev-ss-tunnel is not set
+          CONFIG_PACKAGE_shadowsocks-libev-config=y
+          CONFIG_PACKAGE_shadowsocks-libev-ss-local=y
+          CONFIG_PACKAGE_shadowsocks-libev-ss-redir=y
+          CONFIG_PACKAGE_shadowsocks-libev-ss-rules=y
+          CONFIG_PACKAGE_shadowsocks-libev-ss-server=y
+          CONFIG_PACKAGE_shadowsocks-libev-ss-tunnel=y
           # CONFIG_PACKAGE_sockd is not set
           # CONFIG_PACKAGE_socksify is not set
           # CONFIG_PACKAGE_spawn-fcgi is not set
@@ -6184,8 +6195,8 @@ jobs:
           # CONFIG_PACKAGE_iftop is not set
           # CONFIG_PACKAGE_iiod is not set
           # CONFIG_PACKAGE_iperf is not set
-          CONFIG_PACKAGE_iperf3=y
-          # CONFIG_PACKAGE_iperf3-ssl is not set
+          # CONFIG_PACKAGE_iperf3 is not set
+          CONFIG_PACKAGE_iperf3-ssl=y
           CONFIG_PACKAGE_ipip=y
           CONFIG_PACKAGE_ipset=y
           # CONFIG_PACKAGE_ipset-dns is not set
@@ -6218,7 +6229,7 @@ jobs:
           # CONFIG_PACKAGE_map is not set
           # CONFIG_PACKAGE_mbusd is not set
           # CONFIG_PACKAGE_memcached is not set
-          # CONFIG_PACKAGE_mentohust is not set
+          CONFIG_PACKAGE_mentohust=y
           # CONFIG_PACKAGE_mii-tool is not set
           # CONFIG_PACKAGE_mikrotik-btest is not set
           # CONFIG_PACKAGE_mini_snmpd is not set
@@ -6364,7 +6375,7 @@ jobs:
           # CONFIG_PACKAGE_ulogd is not set
           CONFIG_PACKAGE_umdns=y
           # CONFIG_PACKAGE_usbip is not set
-          # CONFIG_PACKAGE_uugamebooster is not set
+          CONFIG_PACKAGE_uugamebooster=y
           # CONFIG_PACKAGE_vallumd is not set
           # CONFIG_PACKAGE_verysync is not set
           CONFIG_PACKAGE_vlmcsd=y
@@ -6456,13 +6467,21 @@ jobs:
           #
           # CONFIG_PACKAGE_bsdtar is not set
           # CONFIG_PACKAGE_bsdtar-noopenssl is not set
-          # CONFIG_PACKAGE_bzip2 is not set
-          # CONFIG_PACKAGE_gzip is not set
-          # CONFIG_PACKAGE_lz4 is not set
+          CONFIG_PACKAGE_bzip2=y
+          CONFIG_PACKAGE_gzip=y
+          CONFIG_PACKAGE_lz4=y
           # CONFIG_PACKAGE_pigz is not set
-          # CONFIG_PACKAGE_unrar is not set
+          CONFIG_PACKAGE_unrar=y
           CONFIG_PACKAGE_unzip=y
-          # CONFIG_PACKAGE_xz-utils is not set
+          CONFIG_PACKAGE_xz-utils=y
+          # CONFIG_PACKAGE_lzmadec is not set
+          # CONFIG_PACKAGE_lzmainfo is not set
+          CONFIG_PACKAGE_xz=y
+          # CONFIG_PACKAGE_xzdec is not set
+          # CONFIG_PACKAGE_xzdiff is not set
+          # CONFIG_PACKAGE_xzgrep is not set
+          # CONFIG_PACKAGE_xzless is not set
+          # CONFIG_PACKAGE_xzmore is not set
           # CONFIG_PACKAGE_zipcmp is not set
           # CONFIG_PACKAGE_zipmerge is not set
           # CONFIG_PACKAGE_ziptool is not set
@@ -6519,7 +6538,7 @@ jobs:
           # CONFIG_PACKAGE_joe-extras is not set
           # CONFIG_PACKAGE_jupp is not set
           # CONFIG_PACKAGE_mg is not set
-          # CONFIG_PACKAGE_nano is not set
+          CONFIG_PACKAGE_nano=y
           # CONFIG_PACKAGE_vim is not set
           # CONFIG_PACKAGE_vim-full is not set
           # CONFIG_PACKAGE_vim-fuller is not set
@@ -6663,7 +6682,7 @@ jobs:
           # CONFIG_PACKAGE_serialconsole is not set
           # CONFIG_PACKAGE_setterm is not set
           # CONFIG_PACKAGE_tio is not set
-          # CONFIG_PACKAGE_tmux is not set
+          CONFIG_PACKAGE_tmux=y
           CONFIG_PACKAGE_ttyd=y
           # CONFIG_PACKAGE_wall is not set
           # end of Terminal
@@ -7171,14 +7190,20 @@ jobs:
           # CONFIG_PACKAGE_sysrepocfg is not set
           # CONFIG_PACKAGE_sysrepoctl is not set
           # CONFIG_PACKAGE_sysstat is not set
-          # CONFIG_PACKAGE_tar is not set
+          CONFIG_PACKAGE_tar=y
+          # CONFIG_PACKAGE_TAR_POSIX_ACL is not set
+          # CONFIG_PACKAGE_TAR_XATTR is not set
+          CONFIG_PACKAGE_TAR_BZIP2=y
+          CONFIG_PACKAGE_TAR_GZIP=y
+          CONFIG_PACKAGE_TAR_XZ=y
+          CONFIG_PACKAGE_TAR_ZSTD=y
           # CONFIG_PACKAGE_taskwarrior is not set
           # CONFIG_PACKAGE_telldus-core is not set
           # CONFIG_PACKAGE_temperusb is not set
           # CONFIG_PACKAGE_tesseract is not set
           # CONFIG_PACKAGE_tini is not set
           # CONFIG_PACKAGE_tracertools is not set
-          # CONFIG_PACKAGE_tree is not set
+          CONFIG_PACKAGE_tree=y
           # CONFIG_PACKAGE_triggerhappy is not set
           CONFIG_PACKAGE_ubi-utils=y
           # CONFIG_PACKAGE_ucode is not set
