@@ -87,7 +87,11 @@
  	CFG80211_TESTMODE_DUMP(ieee80211_testmode_dump)
 --- a/net/mac80211/ieee80211_i.h
 +++ b/net/mac80211/ieee80211_i.h
+<<<<<<< HEAD
 @@ -1441,6 +1441,7 @@ struct ieee80211_local {
+=======
+@@ -1464,6 +1464,7 @@ struct ieee80211_local {
+>>>>>>> cc2c9269907ed133b64357c8914ea2c27ff867ac
  	int dynamic_ps_forced_timeout;
  
  	int user_power_level; /* in dBm, for all interfaces */

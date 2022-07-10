@@ -34,7 +34,11 @@ Signed-off-by: Christian Lamparter <chunkeey@gmail.com>
  #include <asm/byteorder.h>
  
  #include "core.h"
+<<<<<<< HEAD
 @@ -955,7 +956,8 @@ static int ath10k_core_get_board_id_from
+=======
+@@ -952,7 +953,8 @@ static int ath10k_core_get_board_id_from
+>>>>>>> cc2c9269907ed133b64357c8914ea2c27ff867ac
  	}
  
  	if (ar->cal_mode == ATH10K_PRE_CAL_MODE_DT ||
@@ -44,7 +48,11 @@ Signed-off-by: Christian Lamparter <chunkeey@gmail.com>
  		bmi_board_id_param = BMI_PARAM_GET_FLASH_BOARD_ID;
  	else
  		bmi_board_id_param = BMI_PARAM_GET_EEPROM_BOARD_ID;
+<<<<<<< HEAD
 @@ -1757,7 +1759,8 @@ static int ath10k_download_and_run_otp(s
+=======
+@@ -1743,7 +1745,8 @@ static int ath10k_download_and_run_otp(s
+>>>>>>> cc2c9269907ed133b64357c8914ea2c27ff867ac
  
  	/* As of now pre-cal is valid for 10_4 variants */
  	if (ar->cal_mode == ATH10K_PRE_CAL_MODE_DT ||
@@ -54,7 +62,11 @@ Signed-off-by: Christian Lamparter <chunkeey@gmail.com>
  		bmi_otp_exe_param = BMI_PARAM_FLASH_SECTION_ALL;
  
  	ret = ath10k_bmi_execute(ar, address, bmi_otp_exe_param, &result);
+<<<<<<< HEAD
 @@ -1884,6 +1887,39 @@ out_free:
+=======
+@@ -1870,6 +1873,39 @@ out_free:
+>>>>>>> cc2c9269907ed133b64357c8914ea2c27ff867ac
  	return ret;
  }
  
@@ -94,7 +106,11 @@ Signed-off-by: Christian Lamparter <chunkeey@gmail.com>
  int ath10k_core_fetch_firmware_api_n(struct ath10k *ar, const char *name,
  				     struct ath10k_fw_file *fw_file)
  {
+<<<<<<< HEAD
 @@ -2118,6 +2154,18 @@ static int ath10k_core_pre_cal_download(
+=======
+@@ -2104,6 +2140,18 @@ static int ath10k_core_pre_cal_download(
+>>>>>>> cc2c9269907ed133b64357c8914ea2c27ff867ac
  {
  	int ret;
  
@@ -113,7 +129,11 @@ Signed-off-by: Christian Lamparter <chunkeey@gmail.com>
  	ret = ath10k_download_cal_file(ar, ar->pre_cal_file);
  	if (ret == 0) {
  		ar->cal_mode = ATH10K_PRE_CAL_MODE_FILE;
+<<<<<<< HEAD
 @@ -2184,6 +2232,18 @@ static int ath10k_download_cal_data(stru
+=======
+@@ -2170,6 +2218,18 @@ static int ath10k_download_cal_data(stru
+>>>>>>> cc2c9269907ed133b64357c8914ea2c27ff867ac
  		   "pre cal download procedure failed, try cal file: %d\n",
  		   ret);
  
